@@ -26,7 +26,10 @@ else
   echo "Found awscli and packer in the PATH."
 fi
 
-PACKER_CMD="PACKER_LOG=1 packer build create_test_ami.packer"
+subnet_id=$1
+sg_id=$2
+
+PACKER_CMD="PACKER_LOG=1 packer build create_test_ami.packer ${subnet_id} ${sg_id}"
 echo "Building AMI"
 echo $PACKER_CMD
 $PACKER_CMD
