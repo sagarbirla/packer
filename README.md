@@ -11,4 +11,4 @@
 #### How to build
 - Make sure packer is in your PATH.
 - Clone the repo
-- Run `./create_ami.sh`.
+- Run `./create_ami.sh <subnet_id> <sg_id>`.
